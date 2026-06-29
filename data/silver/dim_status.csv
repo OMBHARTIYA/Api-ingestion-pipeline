@@ -1,0 +1,9 @@
+StatusID,StatusName,ProgressWeight
+STS-001,Not Started,0.0
+STS-002,Released,0.15
+STS-003,In Progress,0.5
+STS-004,Completed,0.85
+STS-005,Approved,1.0
+STS-006,Blocked,0.25
+STS-007,Rework,0.4
+STS-008,Cancelled,0.0

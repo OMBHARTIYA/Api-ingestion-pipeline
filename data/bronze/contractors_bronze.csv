@@ -1,0 +1,21 @@
+ContractorID,ContractorName,ContractorType,Country,City,ActiveFlag
+CTR-001,Arnold Ltd Services,General,Niger,Barbaraland,True
+CTR-002,Stanley LLC Services,Specialist,Belgium,Port Craig,True
+CTR-003,Chavez-Flowers Services,Inspection,Central African Republic,Michaelview,True
+CTR-004,"Zuniga, Wong and Lynch Services",Logistics,Chile,East Steven,True
+CTR-005,Mayo-Bowman Services,Quality,Moldova,Lake Mark,True
+CTR-006,Perez Inc Services,General,Sri Lanka,Richardland,False
+CTR-007,Gentry PLC Services,Specialist,Turkey,Jasonfort,True
+CTR-008,Wilkerson-Day Services,Inspection,Cambodia,Donaldside,True
+CTR-009,"Baker, Richards and Hurst Services",Logistics,Iran,Jeffreyberg,True
+CTR-010,"Snyder, Campos and Callahan Services",Quality,Cape Verde,Port Erin,True
+CTR-011,"Brown, James and Ferrell Services",General,Marshall Islands,Tashatown,True
+CTR-012,"Le, Maldonado and Herrera Services",Specialist,Ethiopia,Danielchester,False
+CTR-013,Chavez Ltd Services,Inspection,Turkey,Teresaburgh,True
+CTR-014,"Gaines, Harrell and Evans Services",Logistics,Northern Mariana Islands,East Nathaniel,True
+CTR-015,Ryan PLC Services,Quality,Uruguay,New Mariotown,True
+CTR-016,Hickman LLC Services,General,Dominican Republic,East Natalieland,True
+CTR-017,Dennis Inc Services,Specialist,Senegal,East Donna,True
+CTR-018,"Martin, Rose and Obrien Services",Inspection,Croatia,Lake Larry,False
+CTR-019,"Santos, Kim and Holmes Services",Logistics,British Indian Ocean Territory (Chagos Archipelago),East Caleb,True
+CTR-020,Chapman and Sons Services,Quality,Namibia,North Chad,True

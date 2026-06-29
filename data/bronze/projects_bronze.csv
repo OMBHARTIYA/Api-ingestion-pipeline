@@ -1,0 +1,6 @@
+ProjectID,ProjectName,ClientName,Country,City,ProjectType,StartDate,EndDate,ProjectStatus
+PRJ-001,DarkOliveGreen Residential Initiative,Figueroa and Sons Group,Czech Republic,Lake Curtis,Residential,2025-09-02,2026-05-26,Planned
+PRJ-002,YellowGreen Commercial Initiative,Garza Inc Group,Antarctica (the territory South of 60 deg S),East Jessetown,Commercial,2025-10-11,2027-01-26,Active
+PRJ-003,Gray Infrastructure Initiative,"Santos, Gardner and Robinson Group",Namibia,Lisatown,Infrastructure,2025-08-02,2026-10-12,On Hold
+PRJ-004,DimGray Industrial Initiative,"Henderson, Ramirez and Lewis Group",Serbia,Curtisfurt,Industrial,2025-10-18,2026-10-24,Closing
+PRJ-005,MintCream Mixed Use Initiative,Munoz-Roman Group,Saint Lucia,Herrerafurt,Mixed Use,2025-02-03,2026-02-07,Completed

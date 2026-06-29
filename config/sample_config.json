@@ -1,0 +1,8 @@
+{
+  "random_seed": 42,
+  "project_count": 5,
+  "contractor_count": 20,
+  "work_item_count": 7500,
+  "status_event_target_count": 45000,
+  "source_system_name": "SyntheticOperationsPlatform"
+}

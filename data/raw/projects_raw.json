@@ -1,0 +1,59 @@
+{
+  "projects": [
+    {
+      "ProjectID": "PRJ-001",
+      "ProjectName": "DarkOliveGreen Residential Initiative",
+      "ClientName": "Figueroa and Sons Group",
+      "Country": "Czech Republic",
+      "City": "Lake Curtis",
+      "ProjectType": "Residential",
+      "StartDate": "2025-09-02",
+      "EndDate": "2026-05-26",
+      "ProjectStatus": "Planned"
+    },
+    {
+      "ProjectID": "PRJ-002",
+      "ProjectName": "YellowGreen Commercial Initiative",
+      "ClientName": "Garza Inc Group",
+      "Country": "Antarctica (the territory South of 60 deg S)",
+      "City": "East Jessetown",
+      "ProjectType": "Commercial",
+      "StartDate": "2025-10-11",
+      "EndDate": "2027-01-26",
+      "ProjectStatus": "Active"
+    },
+    {
+      "ProjectID": "PRJ-003",
+      "ProjectName": "Gray Infrastructure Initiative",
+      "ClientName": "Santos, Gardner and Robinson Group",
+      "Country": "Namibia",
+      "City": "Lisatown",
+      "ProjectType": "Infrastructure",
+      "StartDate": "2025-08-02",
+      "EndDate": "2026-10-12",
+      "ProjectStatus": "On Hold"
+    },
+    {
+      "ProjectID": "PRJ-004",
+      "ProjectName": "DimGray Industrial Initiative",
+      "ClientName": "Henderson, Ramirez and Lewis Group",
+      "Country": "Serbia",
+      "City": "Curtisfurt",
+      "ProjectType": "Industrial",
+      "StartDate": "2025-10-18",
+      "EndDate": "2026-10-24",
+      "ProjectStatus": "Closing"
+    },
+    {
+      "ProjectID": "PRJ-005",
+      "ProjectName": "MintCream Mixed Use Initiative",
+      "ClientName": "Munoz-Roman Group",
+      "Country": "Saint Lucia",
+      "City": "Herrerafurt",
+      "ProjectType": "Mixed Use",
+      "StartDate": "2025-02-03",
+      "EndDate": "2026-02-07",
+      "ProjectStatus": "Completed"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+ProjectID,ProjectName,TotalWorkItems,CompletedWorkItems,ApprovedWorkItems,BlockedWorkItems,AverageProgressWeight,CompletionPercent
+PRJ-001,DarkOliveGreen Residential Initiative,1500,570,361,95,0.692,62.07
+PRJ-002,YellowGreen Commercial Initiative,1500,613,338,110,0.698,63.4
+PRJ-003,Gray Infrastructure Initiative,1500,597,332,88,0.689,61.93
+PRJ-004,DimGray Industrial Initiative,1500,594,350,91,0.6996,62.93
+PRJ-005,MintCream Mixed Use Initiative,1500,631,328,92,0.7029,63.93

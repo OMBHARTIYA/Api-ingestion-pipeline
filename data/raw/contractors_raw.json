@@ -1,0 +1,164 @@
+{
+  "contractors": [
+    {
+      "ContractorID": "CTR-001",
+      "ContractorName": "Arnold Ltd Services",
+      "ContractorType": "General",
+      "Country": "Niger",
+      "City": "Barbaraland",
+      "ActiveFlag": true
+    },
+    {
+      "ContractorID": "CTR-002",
+      "ContractorName": "Stanley LLC Services",
+      "ContractorType": "Specialist",
+      "Country": "Belgium",
+      "City": "Port Craig",
+      "ActiveFlag": true
+    },
+    {
+      "ContractorID": "CTR-003",
+      "ContractorName": "Chavez-Flowers Services",
+      "ContractorType": "Inspection",
+      "Country": "Central African Republic",
+      "City": "Michaelview",
+      "ActiveFlag": true
+    },
+    {
+      "ContractorID": "CTR-004",
+      "ContractorName": "Zuniga, Wong and Lynch Services",
+      "ContractorType": "Logistics",
+      "Country": "Chile",
+      "City": "East Steven",
+      "ActiveFlag": true
+    },
+    {
+      "ContractorID": "CTR-005",
+      "ContractorName": "Mayo-Bowman Services",
+      "ContractorType": "Quality",
+      "Country": "Moldova",
+      "City": "Lake Mark",
+      "ActiveFlag": true
+    },
+    {
+      "ContractorID": "CTR-006",
+      "ContractorName": "Perez Inc Services",
+      "ContractorType": "General",
+      "Country": "Sri Lanka",
+      "City": "Richardland",
+      "ActiveFlag": false
+    },
+    {
+      "ContractorID": "CTR-007",
+      "ContractorName": "Gentry PLC Services",
+      "ContractorType": "Specialist",
+      "Country": "Turkey",
+      "City": "Jasonfort",
+      "ActiveFlag": true
+    },
+    {
+      "ContractorID": "CTR-008",
+      "ContractorName": "Wilkerson-Day Services",
+      "ContractorType": "Inspection",
+      "Country": "Cambodia",
+      "City": "Donaldside",
+      "ActiveFlag": true
+    },
+    {
+      "ContractorID": "CTR-009",
+      "ContractorName": "Baker, Richards and Hurst Services",
+      "ContractorType": "Logistics",
+      "Country": "Iran",
+      "City": "Jeffreyberg",
+      "ActiveFlag": true
+    },
+    {
+      "ContractorID": "CTR-010",
+      "ContractorName": "Snyder, Campos and Callahan Services",
+      "ContractorType": "Quality",
+      "Country": "Cape Verde",
+      "City": "Port Erin",
+      "ActiveFlag": true
+    },
+    {
+      "ContractorID": "CTR-011",
+      "ContractorName": "Brown, James and Ferrell Services",
+      "ContractorType": "General",
+      "Country": "Marshall Islands",
+      "City": "Tashatown",
+      "ActiveFlag": true
+    },
+    {
+      "ContractorID": "CTR-012",
+      "ContractorName": "Le, Maldonado and Herrera Services",
+      "ContractorType": "Specialist",
+      "Country": "Ethiopia",
+      "City": "Danielchester",
+      "ActiveFlag": false
+    },
+    {
+      "ContractorID": "CTR-013",
+      "ContractorName": "Chavez Ltd Services",
+      "ContractorType": "Inspection",
+      "Country": "Turkey",
+      "City": "Teresaburgh",
+      "ActiveFlag": true
+    },
+    {
+      "ContractorID": "CTR-014",
+      "ContractorName": "Gaines, Harrell and Evans Services",
+      "ContractorType": "Logistics",
+      "Country": "Northern Mariana Islands",
+      "City": "East Nathaniel",
+      "ActiveFlag": true
+    },
+    {
+      "ContractorID": "CTR-015",
+      "ContractorName": "Ryan PLC Services",
+      "ContractorType": "Quality",
+      "Country": "Uruguay",
+      "City": "New Mariotown",
+      "ActiveFlag": true
+    },
+    {
+      "ContractorID": "CTR-016",
+      "ContractorName": "Hickman LLC Services",
+      "ContractorType": "General",
+      "Country": "Dominican Republic",
+      "City": "East Natalieland",
+      "ActiveFlag": true
+    },
+    {
+      "ContractorID": "CTR-017",
+      "ContractorName": "Dennis Inc Services",
+      "ContractorType": "Specialist",
+      "Country": "Senegal",
+      "City": "East Donna",
+      "ActiveFlag": true
+    },
+    {
+      "ContractorID": "CTR-018",
+      "ContractorName": "Martin, Rose and Obrien Services",
+      "ContractorType": "Inspection",
+      "Country": "Croatia",
+      "City": "Lake Larry",
+      "ActiveFlag": false
+    },
+    {
+      "ContractorID": "CTR-019",
+      "ContractorName": "Santos, Kim and Holmes Services",
+      "ContractorType": "Logistics",
+      "Country": "British Indian Ocean Territory (Chagos Archipelago)",
+      "City": "East Caleb",
+      "ActiveFlag": true
+    },
+    {
+      "ContractorID": "CTR-020",
+      "ContractorName": "Chapman and Sons Services",
+      "ContractorType": "Quality",
+      "Country": "Namibia",
+      "City": "North Chad",
+      "ActiveFlag": true
+    }
+  ]
+}
