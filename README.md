@@ -79,11 +79,20 @@ pip install -r requirements.txt
 Run the pipeline:
 
 ```bash
+python scripts/run_pipeline.py
+```
+
+The full runner regenerates raw, bronze, silver, and gold outputs, then writes a validation report.
+
+You can also run the individual steps manually:
+
+```bash
 python scripts/generate_fake_api_data.py
 python scripts/ingest_raw.py
 python scripts/transform_bronze.py
 python scripts/transform_silver.py
 python scripts/build_gold_summary.py
+python scripts/write_validation_report.py
 ```
 
 ## Data Quality Checks
@@ -102,6 +111,13 @@ The pipeline enforces these checks during the silver transformation step:
 - `data/gold/project_progress_summary.csv`
 - `data/gold/contractor_performance_summary.csv`
 - `data/gold/monthly_progress_summary.csv`
+- `data/gold/pipeline_health_summary.csv`
+
+## Proof for Reviewers
+
+- [Validation report](./docs/validation-report.md): row counts, key checks, relationship checks, latest-event checks, and gold-output checks.
+- [Pipeline flow](./docs/pipeline-flow.md): how raw JSON becomes reporting-ready CSV outputs.
+- [Power BI model](./docs/power-bi-model.md): suggested star-schema layout for BI reporting.
 
 ## Power BI Modeling
 
