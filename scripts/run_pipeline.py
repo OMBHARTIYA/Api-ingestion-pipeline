@@ -8,7 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 STEPS = [
-    "generate_fake_api_data.py",
+    "generate_synthetic_api_data.py",
     "ingest_raw.py",
     "transform_bronze.py",
     "transform_silver.py",

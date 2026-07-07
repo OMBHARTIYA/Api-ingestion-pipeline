@@ -4,11 +4,11 @@ This project uses a synthetic architecture that mirrors a modern ingestion pipel
 
 ## Flow
 
-`Fake API source -> Raw JSON -> Bronze CSV -> Silver model -> Gold summaries -> Power BI`
+`Synthetic API source -> Raw JSON -> Bronze CSV -> Silver model -> Gold summaries -> Power BI`
 
 ## Components
 
-- Fake API source: `scripts/generate_fake_api_data.py` creates deterministic JSON payloads that mimic REST responses.
+- Synthetic API source: `scripts/generate_synthetic_api_data.py` creates deterministic JSON payloads that mimic REST responses.
 - Raw layer: `data/raw/` stores the generated payloads in source-like JSON format.
 - Bronze layer: `scripts/transform_bronze.py` flattens the raw payloads into normalized CSV files in `data/bronze/`.
 - Silver layer: `scripts/transform_silver.py` cleans data types, applies validation rules, and creates analytics-ready dimensions and fact tables in `data/silver/`.

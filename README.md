@@ -2,7 +2,7 @@
 
 This repository is a portfolio-safe synthetic API ingestion pipeline case study. I built this synthetic API ingestion pipeline to demonstrate how operational data can be extracted, normalized, transformed, validated, and prepared for analytics reporting.
 
-No real API, company, client, employer, production environment, or confidential implementation detail is included. The full workflow runs locally using deterministic fake data generated from scratch.
+No real API, company, client, employer, production environment, or confidential implementation detail is included. The full workflow runs locally using deterministic synthetic data generated from scratch.
 
 ## What the Project Covers
 
@@ -29,7 +29,7 @@ api-ingestion-pipeline/
 │   ├── silver/
 │   └── gold/
 ├── scripts/
-│   ├── generate_fake_api_data.py
+│   ├── generate_synthetic_api_data.py
 │   ├── ingest_raw.py
 │   ├── transform_bronze.py
 │   ├── transform_silver.py
@@ -46,16 +46,16 @@ api-ingestion-pipeline/
 
 ## Synthetic Entities
 
-- `projects`: 5 fake projects
-- `work_items`: 7,500 fake work items
+- `projects`: 5 synthetic projects
+- `work_items`: 7,500 synthetic work items
 - `status_events`: deterministic high-volume status history records
-- `contractors`: 20 fake contractors
+- `contractors`: 20 synthetic contractors
 - `dim_status`: 8 generic workflow statuses
 
 ## Pipeline Flow
 
 ```text
-Fake API Source
+Synthetic API Source
     ->
 Raw JSON
     ->
@@ -87,7 +87,7 @@ The full runner regenerates raw, bronze, silver, and gold outputs, then writes a
 You can also run the individual steps manually:
 
 ```bash
-python scripts/generate_fake_api_data.py
+python scripts/generate_synthetic_api_data.py
 python scripts/ingest_raw.py
 python scripts/transform_bronze.py
 python scripts/transform_silver.py

@@ -7,8 +7,8 @@
       "Country": "Czech Republic",
       "City": "Lake Curtis",
       "ProjectType": "Residential",
-      "StartDate": "2025-09-02",
-      "EndDate": "2026-05-26",
+      "StartDate": "2025-09-10",
+      "EndDate": "2026-06-03",
       "ProjectStatus": "Planned"
     },
     {
@@ -18,8 +18,8 @@
       "Country": "Antarctica (the territory South of 60 deg S)",
       "City": "East Jessetown",
       "ProjectType": "Commercial",
-      "StartDate": "2025-10-11",
-      "EndDate": "2027-01-26",
+      "StartDate": "2025-10-19",
+      "EndDate": "2027-02-03",
       "ProjectStatus": "Active"
     },
     {
@@ -29,8 +29,8 @@
       "Country": "Namibia",
       "City": "Lisatown",
       "ProjectType": "Infrastructure",
-      "StartDate": "2025-08-02",
-      "EndDate": "2026-10-12",
+      "StartDate": "2025-08-10",
+      "EndDate": "2026-10-20",
       "ProjectStatus": "On Hold"
     },
     {
@@ -40,8 +40,8 @@
       "Country": "Serbia",
       "City": "Curtisfurt",
       "ProjectType": "Industrial",
-      "StartDate": "2025-10-18",
-      "EndDate": "2026-10-24",
+      "StartDate": "2025-10-26",
+      "EndDate": "2026-11-01",
       "ProjectStatus": "Closing"
     },
     {
@@ -51,8 +51,8 @@
       "Country": "Saint Lucia",
       "City": "Herrerafurt",
       "ProjectType": "Mixed Use",
-      "StartDate": "2025-02-03",
-      "EndDate": "2026-02-07",
+      "StartDate": "2025-02-11",
+      "EndDate": "2026-02-15",
       "ProjectStatus": "Completed"
     }
   ]

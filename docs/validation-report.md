@@ -1,6 +1,6 @@
 # Validation Report
 
-Generated: 2026-07-05 22:45 UTC
+Generated: 2026-07-07 14:32 UTC
 
 Overall status: **PASS**
 
@@ -15,7 +15,7 @@ Overall status: **PASS**
 | `fact_status_event` | 45,194 |
 | `project_progress_summary` | 5 |
 | `contractor_performance_summary` | 20 |
-| `monthly_progress_summary` | 65 |
+| `monthly_progress_summary` | 66 |
 
 ## Quality Checks
 

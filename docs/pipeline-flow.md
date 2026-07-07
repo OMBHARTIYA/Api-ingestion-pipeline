@@ -1,9 +1,9 @@
 # Pipeline Flow
 
-## `scripts/generate_fake_api_data.py`
+## `scripts/generate_synthetic_api_data.py`
 
 - Loads the sample configuration and random seed
-- Generates fake projects, contractors, work items, and status events
+- Generates synthetic projects, contractors, work items, and status events
 - Writes REST-style JSON payloads to `data/raw/`
 
 ## `scripts/ingest_raw.py`

@@ -6,7 +6,7 @@
 
 - `ProjectID`: Synthetic project identifier
 - `ProjectName`: Generated project label
-- `ClientName`: Fake client name
+- `ClientName`: Synthetic client name
 - `Country`: Generated country
 - `City`: Generated city
 - `ProjectType`: Generic project classification
@@ -41,13 +41,13 @@
 - `DaysInPreviousStatus`: Number of days spent in prior status
 - `UpdatedBy`: Synthetic contractor identifier captured at the raw stage
 - `SourceSystem`: Synthetic source-system name
-- `Comment`: Fake free-text event comment
+- `Comment`: Synthetic free-text event comment
 - `IsLatestStatus`: Boolean flag for the latest event on a work item
 
 ### `contractors_raw.json` and `contractors_bronze.csv`
 
 - `ContractorID`: Synthetic contractor identifier
-- `ContractorName`: Fake contractor name
+- `ContractorName`: Synthetic contractor name
 - `ContractorType`: Generic contractor classification
 - `Country`: Contractor country
 - `City`: Contractor city

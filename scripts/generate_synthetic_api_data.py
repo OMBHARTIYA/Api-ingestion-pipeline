@@ -4,25 +4,25 @@ import logging
 from datetime import date, timedelta
 
 import numpy as np
-from faker import Faker
+from faker import Faker as SyntheticTextFactory
 
 from pipeline_utils import ALLOWED_STATUSES, RAW_DIR, ensure_directories, load_config, save_json, setup_logging
 
 
-def build_projects(fake: Faker, rng: np.random.Generator, count: int) -> list[dict]:
+def build_projects(text_factory: SyntheticTextFactory, rng: np.random.Generator, count: int) -> list[dict]:
     project_types = ["Residential", "Commercial", "Infrastructure", "Industrial", "Mixed Use"]
     statuses = ["Planned", "Active", "On Hold", "Closing", "Completed"]
     projects = []
     for index in range(1, count + 1):
-        start_date = fake.date_between(start_date="-18M", end_date="-6M")
+        start_date = text_factory.date_between(start_date="-18M", end_date="-6M")
         end_date = start_date + timedelta(days=int(rng.integers(240, 540)))
         projects.append(
             {
                 "ProjectID": f"PRJ-{index:03d}",
-                "ProjectName": f"{fake.color_name()} {project_types[(index - 1) % len(project_types)]} Initiative",
-                "ClientName": f"{fake.company()} Group",
-                "Country": fake.country(),
-                "City": fake.city(),
+                "ProjectName": f"{text_factory.color_name()} {project_types[(index - 1) % len(project_types)]} Initiative",
+                "ClientName": f"{text_factory.company()} Group",
+                "Country": text_factory.country(),
+                "City": text_factory.city(),
                 "ProjectType": project_types[(index - 1) % len(project_types)],
                 "StartDate": start_date.isoformat(),
                 "EndDate": end_date.isoformat(),
@@ -32,17 +32,17 @@ def build_projects(fake: Faker, rng: np.random.Generator, count: int) -> list[di
     return projects
 
 
-def build_contractors(fake: Faker, count: int) -> list[dict]:
+def build_contractors(text_factory: SyntheticTextFactory, count: int) -> list[dict]:
     contractor_types = ["General", "Specialist", "Inspection", "Logistics", "Quality"]
     contractors = []
     for index in range(1, count + 1):
         contractors.append(
             {
                 "ContractorID": f"CTR-{index:03d}",
-                "ContractorName": f"{fake.company()} Services",
+                "ContractorName": f"{text_factory.company()} Services",
                 "ContractorType": contractor_types[(index - 1) % len(contractor_types)],
-                "Country": fake.country(),
-                "City": fake.city(),
+                "Country": text_factory.country(),
+                "City": text_factory.city(),
                 "ActiveFlag": bool(index % 6 != 0),
             }
         )
@@ -50,7 +50,7 @@ def build_contractors(fake: Faker, count: int) -> list[dict]:
 
 
 def build_work_items(
-    fake: Faker,
+    text_factory: SyntheticTextFactory,
     rng: np.random.Generator,
     projects: list[dict],
     count: int,
@@ -64,14 +64,14 @@ def build_work_items(
     for index in range(1, count + 1):
         project = projects[index % len(projects)]
         project_start = date.fromisoformat(project["StartDate"])
-        start_date = fake.date_between(start_date=project_start, end_date="-1M")
+        start_date = text_factory.date_between(start_date=project_start, end_date="-1M")
         finish_date = start_date + timedelta(days=int(rng.integers(5, 120)))
         work_items.append(
             {
                 "WorkItemID": f"WIT-{index:06d}",
                 "ProjectID": project["ProjectID"],
                 "WorkItemCode": f"{project['ProjectID']}-ITEM-{index:06d}",
-                "WorkItemName": f"{fake.bs().title()} Package",
+                "WorkItemName": f"{categories[index % len(categories)]} Reporting Package",
                 "WorkItemCategory": categories[index % len(categories)],
                 "WorkItemType": item_types[index % len(item_types)],
                 "PlannedStartDate": start_date.isoformat(),
@@ -86,7 +86,6 @@ def build_work_items(
 
 
 def build_status_events(
-    fake: Faker,
     rng: np.random.Generator,
     projects: list[dict],
     work_items: list[dict],
@@ -96,6 +95,13 @@ def build_status_events(
 ) -> list[dict]:
     progress_path = ["STS-001", "STS-002", "STS-003", "STS-004", "STS-005"]
     exception_statuses = ["STS-006", "STS-007"]
+    comment_templates = [
+        "Representative status update for operational reporting validation.",
+        "Synthetic progress event used for pipeline quality checks.",
+        "Portfolio-safe workflow update for BI model testing.",
+        "Representative exception note for analyst review and reconciliation.",
+        "Synthetic handoff update used to validate status history logic.",
+    ]
     event_count_per_item = rng.integers(3, 10, size=len(work_items))
     scale_factor = max(target_count / int(event_count_per_item.sum()), 1)
     adjusted_counts = np.maximum(3, np.round(event_count_per_item * scale_factor).astype(int))
@@ -138,7 +144,7 @@ def build_status_events(
                     "DaysInPreviousStatus": None if previous_status is None else days_elapsed,
                     "UpdatedBy": contractor["ContractorID"],
                     "SourceSystem": source_system_name,
-                    "Comment": fake.sentence(nb_words=10),
+                    "Comment": comment_templates[(event_id - 1) % len(comment_templates)],
                     "IsLatestStatus": False,
                 }
             )
@@ -155,16 +161,15 @@ def main() -> None:
     setup_logging()
     ensure_directories()
     config = load_config()
-    fake = Faker()
-    Faker.seed(config["random_seed"])
+    text_factory = SyntheticTextFactory()
+    SyntheticTextFactory.seed(config["random_seed"])
     rng = np.random.default_rng(config["random_seed"])
 
     logging.info("Generating synthetic API payloads with seed %s", config["random_seed"])
-    projects = build_projects(fake, rng, config["project_count"])
-    contractors = build_contractors(fake, config["contractor_count"])
-    work_items = build_work_items(fake, rng, projects, config["work_item_count"])
+    projects = build_projects(text_factory, rng, config["project_count"])
+    contractors = build_contractors(text_factory, config["contractor_count"])
+    work_items = build_work_items(text_factory, rng, projects, config["work_item_count"])
     status_events = build_status_events(
-        fake,
         rng,
         projects,
         work_items,
