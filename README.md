@@ -4,6 +4,18 @@ This repository is a portfolio-safe synthetic API ingestion pipeline case study.
 
 No real API, company, client, employer, production environment, or confidential implementation detail is included. The full workflow runs locally using deterministic synthetic data generated from scratch.
 
+## Reviewer Value
+
+This repo is designed to show how I prepare operational API-style data for analytics:
+
+- land nested JSON-style source payloads in a raw layer
+- normalize source records into bronze CSV tables
+- build silver fact and dimension outputs for reporting
+- produce gold summaries for Power BI consumption
+- run row-count, key, status, and latest-event validation checks
+
+The focus is the repeatable ingestion and validation pattern, not exposure of any private source system.
+
 ## What the Project Covers
 
 - Synthetic REST-style source payload generation
