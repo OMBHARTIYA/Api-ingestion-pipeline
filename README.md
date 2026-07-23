@@ -16,6 +16,12 @@ This repo is designed to show how I prepare operational API-style data for analy
 
 The focus is the repeatable ingestion and validation pattern, not exposure of any private source system.
 
+Alongside the runnable synthetic workflow, the documentation captures the
+delivery controls I use to design, review, and operate reliable scheduled
+Microsoft Fabric ingestion: stable incremental windows, explicit pagination,
+raw-file isolation, PySpark/Delta curation, quality gates, safe watermark
+commits, alerting, and replay.
+
 ## What the Project Covers
 
 - Synthetic REST-style source payload generation
@@ -50,6 +56,7 @@ api-ingestion-pipeline/
 ├── docs/
 │   ├── architecture.md
 │   ├── data-dictionary.md
+│   ├── incremental-refresh-pattern.md
 │   ├── pipeline-flow.md
 │   └── power-bi-model.md
 └── notebooks/
@@ -79,6 +86,23 @@ Gold Summaries
     ->
 Power BI
 ```
+
+## Microsoft Fabric Reliability Blueprint
+
+The runnable project remains fully local and synthetic. A separate
+[incremental refresh pattern](./docs/incremental-refresh-pattern.md) documents
+the delivery controls behind a reliable Microsoft Fabric implementation:
+
+- capture one stable extraction window for the whole run
+- paginate every incremental endpoint to an explicit termination signal
+- isolate raw pages by run so retries cannot consume stale files
+- transform and deduplicate before publishing curated tables
+- archive raw evidence before deleting working files
+- advance the success watermark only after every required branch passes
+- route any upstream failure to an actionable pipeline-level alert
+
+This is a clean-room architecture note, not a production export. It contains
+no real endpoint, identifier, connection, schema, record, or environment value.
 
 ## Run Locally
 
@@ -137,4 +161,7 @@ Load the silver and gold CSV files into Power BI Desktop and relate them through
 
 ## Safety Note
 
-All data in this repository is synthetic. No real company, client, API endpoint, credential, source system, BIM/model data, or operational data is included.
+All data in this repository is synthetic. No real company, client, API
+endpoint, credential, source system, project or tenant identifier, workspace
+or storage identifier, connection name, production schema, BIM/model data,
+operational record, screenshot, or exported pipeline definition is included.
