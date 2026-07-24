@@ -18,7 +18,7 @@ This project uses a synthetic architecture that mirrors a modern ingestion pipel
 ## Microsoft Fabric Control Plane
 
 The local runner demonstrates the data layers. The companion
-[operating case study](./incremental-refresh-pattern.md) reconstructs the
+[operating case study](./incremental-refresh-pattern.md) presents the
 scheduled Microsoft Fabric control plane I authored, using only synthetic
 public labels:
 

@@ -3,8 +3,8 @@
 This repository combines two forms of public proof:
 
 1. a runnable local raw-to-gold pipeline using deterministic generated data
-2. a syntheticized reconstruction of a Microsoft Fabric API ingestion
-   operating design I authored for scheduled construction-data delivery
+2. public-safe documentation of a Microsoft Fabric API ingestion operating
+   design I authored for scheduled construction-data delivery
 
 The sample records are generated. The documented orchestration, pagination,
 state, PySpark curation, raw-file lifecycle, validation, and recovery design
@@ -100,7 +100,7 @@ Power BI
 
 The detailed
 [Microsoft Fabric operating case study](./docs/incremental-refresh-pattern.md)
-reconstructs the authored delivery design with synthetic public labels:
+presents the authored delivery design with synthetic public labels:
 
 - workload matrix for incremental streams and supporting snapshots
 - pipeline state contract and frozen-window semantics
@@ -111,8 +111,9 @@ reconstructs the authored delivery design with synthetic public labels:
 - empty-window, validation, alerting, failure, and replay contracts
 - prioritized findings from the structural operating review
 
-This is a reconstruction, not a production export. The public labels cannot be
-used to infer a private endpoint, environment, artifact, or identifier.
+This is a public-safe representation of the authored design, not a production
+export. The public labels cannot be used to infer a private endpoint,
+environment, artifact, or identifier.
 
 ## Run Locally
 
@@ -172,8 +173,8 @@ Load the silver and gold CSV files into Power BI Desktop and relate them through
 
 ## Safety Note
 
-All repository data is synthetic. The operating workflow is reconstructed from
-design work I authored, but every organization, source product, endpoint,
+All repository data is synthetic. The operating workflow comes from design
+work I authored, but every organization, source product, endpoint,
 credential, project or tenant identifier, workspace, lakehouse, warehouse,
 storage or connection identifier, internal artifact name, production schema or
 path, source record, screenshot, run history, and exported definition is

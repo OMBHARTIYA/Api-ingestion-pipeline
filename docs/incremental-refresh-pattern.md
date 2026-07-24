@@ -1,13 +1,13 @@
 # Microsoft Fabric API Ingestion Operating Case Study
 
-This case study reconstructs an operating design I authored for scheduled
+This case study presents an operating design I authored for scheduled
 construction-data ingestion in Microsoft Fabric. It preserves the real
 workflow, control decisions, review findings, and recovery logic while
 replacing every source-specific name and omitting all production identifiers.
 
 The runnable files elsewhere in this repository use generated sample records.
-The orchestration described here is not an invented pipeline: it is a
-public-safe representation of the operating pattern I designed and documented.
+The orchestration described here comes from the operating pattern I designed
+and documented; only its public identifiers and example records are synthetic.
 
 ## Public Boundary
 
