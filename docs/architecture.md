@@ -15,20 +15,24 @@ This project uses a synthetic architecture that mirrors a modern ingestion pipel
 - Gold layer: `scripts/build_gold_summary.py` aggregates the silver model into reporting-friendly summaries in `data/gold/`.
 - BI layer: Power BI can import the silver and gold CSV outputs directly for dashboard creation.
 
-## Production-Control Blueprint
+## Microsoft Fabric Control Plane
 
 The local runner demonstrates the data layers. The companion
-[incremental refresh pattern](./incremental-refresh-pattern.md) documents the
-delivery-informed control plane for a scheduled Microsoft Fabric implementation:
+[operating case study](./incremental-refresh-pattern.md) reconstructs the
+scheduled Microsoft Fabric control plane I authored, using only synthetic
+public labels:
 
 ```text
-Single-row watermark
-    -> freeze one run window
-    -> paginated API extraction
-    -> run-isolated raw files
-    -> transform, validate, and publish
-    -> archive raw evidence
-    -> commit watermark after all branches succeed
+Read exactly one state row
+    -> capture one run-end boundary
+    -> persist the active, uncommitted boundary
+    -> run incremental and reference branches
+    -> paginate incremental streams to an explicit terminal signal
+    -> land pages in a run-specific raw location
+    -> flatten, type, deduplicate, and publish curated Delta outputs
+    -> reconcile pages, rows, keys, schema, time, and freshness
+    -> archive raw evidence before working-file cleanup
+    -> commit the active boundary only after every required branch succeeds
 ```
 
 The data plane and control plane have separate responsibilities:
@@ -38,7 +42,11 @@ The data plane and control plane have separate responsibilities:
   retries, validation gates, archival order, notifications, and recovery.
 - The success boundary never advances on a partial run.
 - Retries reuse the uncommitted window and remain safe through deterministic
-  deduplication or key-based merge logic.
+  deduplication and key-based replacement or merge logic.
+- Required snapshot branches join the same success gate as the incremental
+  streams when their outputs are part of the reporting contract.
+- Pipeline-level failure handling records the unchanged window and first failed
+  activity even when the final state activity is never reached.
 
 ## Design Notes
 
@@ -46,6 +54,6 @@ The data plane and control plane have separate responsibilities:
 - Status events simulate event history and current-state tracking.
 - The silver model is intentionally simple and portfolio-friendly, centered around one fact table and supporting dimensions.
 - Logging and validation are included in each step to demonstrate pipeline observability.
-- Documentation derived from private delivery experience is rewritten as a
-  vendor-neutral clean-room pattern; deployment identifiers and internal
-  implementation details are intentionally excluded.
+- The operating case study preserves the real workflow and review findings but
+  replaces or omits every organization, source, project, environment, artifact,
+  connection, schema, path, credential, record, and deployment identifier.
